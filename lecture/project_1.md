@@ -3,7 +3,7 @@
 > * 화면전환 방법 습득
 > * 공유 데이터 관리
 > * 디자인 패턴의 이해향상
-> * [Human Interface Guideline](#Human)
+> * [Human Interface Guideline](#Human-Interface-Guideline)
 ## 배우는 내용
 * 디자인 패턴
 	* Delegation Pattern
@@ -25,6 +25,7 @@
 	* Dictionary의 활용
 	* guard 구문의 활용
 
-### Human Interface Guideline
+## Human Interface Guideline
+ㅇㅇ
 
 
