@@ -1,21 +1,30 @@
-# [부스트코스] IOS 프로그래밍 정리md
+# Project 1 정리 노트
+> * 다양한 애플리케이션에서 활용할 수 있는 회원가입 절차 구현
+> * 화면전환 방법 습득
+> * 공유 데이터 관리
+> * 디자인 패턴의 이해향상
+> * [Human Interface Guideline](#Human)
+## 배우는 내용
+* 디자인 패턴
+	* Delegation Pattern
+	* Singleton
+	* Targte-Action
+* 화면전환
+	* 네비게이션 인터페이스
+	* Modality
+* UIKit
+	* UITextField
+	* UIDatePicker
+	* UIStackView
+	* UIImagePickerController
+	* UIGestureRecognizer
+	* View Controller States Methods(뷰 생명주기)
+* Foundation
+	* DateFormatter
+* Swift
+	* Dictionary의 활용
+	* guard 구문의 활용
 
-> [Edwith](https://www.edwith.org) 사이트에서 공부한 내용들을 정리해서 올리는 repo 입니다.
+### Human Interface Guideline
 
-## 강의 목차
-* Project 1
-* Project 2
-* Project 3
-* Project 4
-* Project 5
-
-## 카테고리별 정리
-* 개발
-	* Xcode
-* 프로젝트
-* 애플 개발자 문서
-	* 
-
-## 개발
-### ios
 
