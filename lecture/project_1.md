@@ -82,7 +82,7 @@ let navigationController = UINavigationController(rootViewController: rootViewCo
 
 ### 네비게이션 바 지우기
 1. 스토리보드에서
-![네비게이션바지우기](./img/progect1/navigation2.png)
+![네비게이션바지우기](./img/project1/navigation2.png)
 2. 코드
 ```
 navigationController?.isNavigationBarHidden = true
