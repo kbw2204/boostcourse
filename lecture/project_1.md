@@ -10,7 +10,7 @@
 	- Singleton
 	- Targte-Action
 - 화면전환
-	- 네비게이션 인터페이스
+	- [네비게이션 인터페이스](#네비게이션-인터페이스)
 	- Modality
 - UIKit
 	- UITextField
@@ -26,7 +26,7 @@
 	- guard 구문의 활용
 
 ## Human Interface Guideline
-#### [개발자 문서링크](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
+- [개발자 문서링크](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 
 H.I.G는 앱을 개발할 때 필요한 디자인과 동작을 포함한 여러 규칙을 통하여 사용자가 인터페이스를 구성하는 방법에 대한 지침이다.
 > 한마디로 가이드라인!
@@ -52,5 +52,15 @@ H.I.G는 앱을 개발할 때 필요한 디자인과 동작을 포함한 여러 
 - 은유
 - 사용자 컨트롤
 > 대화형 요소를 넣어 친숙하고 예측 가능하게 유지하고 작업이 이미 진행중인 경우에도 작업을 취소하기 쉽게함으로써 사람들이 통제 가능 상태에 있는것처럼 느낄 수 있게 합니다.
+
+[돌아가기 > 배우는 내용](#배우는-내용)
+
+## 네비게이션 인터페이스
+- [UINavigationBar - UIKit](https://developer.apple.com/documentation/uikit/uinavigationbar)
+- [UINavigationController - UIKit]((https://developer.apple.com/documentation/uikit/uinavigationcontroller))
+
+### 네비게이션 인터페이스란..
+> 뷰 이동을 계층적 구조(드릴 다운 인터페이스)로 사용되는 인터페이스이다.
+![계층적 구조](./img/project1/navigation1.png)
 
 [돌아가기 > 배우는 내용](#배우는-내용)
