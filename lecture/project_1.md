@@ -26,8 +26,6 @@
 	- guard 구문의 활용
 
 ## Human Interface Guideline
-- [개발자 문서링크](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
-
 H.I.G는 앱을 개발할 때 필요한 디자인과 동작을 포함한 여러 규칙을 통하여 사용자가 인터페이스를 구성하는 방법에 대한 지침이다.
 > 한마디로 가이드라인!
 ### 왜 H.I.G 문서를 읽어야 하나?
@@ -53,14 +51,44 @@ H.I.G는 앱을 개발할 때 필요한 디자인과 동작을 포함한 여러 
 - 사용자 컨트롤
 > 대화형 요소를 넣어 친숙하고 예측 가능하게 유지하고 작업이 이미 진행중인 경우에도 작업을 취소하기 쉽게함으로써 사람들이 통제 가능 상태에 있는것처럼 느낄 수 있게 합니다.
 
+#### 참고
+- [Human Interface Guideline](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
+
 [돌아가기 > 배우는 내용](#배우는-내용)
 
-## 네비게이션 인터페이스
-- [UINavigationBar - UIKit](https://developer.apple.com/documentation/uikit/uinavigationbar)
-- [UINavigationController - UIKit]((https://developer.apple.com/documentation/uikit/uinavigationcontroller))
+## 내비게이션 인터페이스
 
-### 네비게이션 인터페이스란..
+### 내비게이션 인터페이스란..
 > 뷰 이동을 계층적 구조(드릴 다운 인터페이스)로 사용되는 인터페이스이다.
 ![계층적 구조](./img/project1/navigation1.png)
+
+### 내비게이션 컨트롤러는 왜 쓰는거지..?
+> 내비게이션 컨트롤러를 사용하게 되면 내비게이션 스택을 사용하여 다른 뷰 컨트롤러를 관리하게 되는데, 기본적으로 ios 화면전환은 stack과 같은 느낌이다.  인터페이스의 stack이란 화면이 바뀔 때마다 원래 있던 화면 위에 새 화면이 올라가는 형식인데 그래서 다시 이젠 화면으로 돌아갈 때엔 이전에 올렸던 화면을 빼야한다. 여기서 네이게이션 컨트롤러를 사용하면 뷰를 pop 하거나 push를 하기 용의해지는데, 뷰를 pop하게 되면 이전에 올라갔던 화면을 빼주는 역할을 하게 된다. + 추가요청..
+
+### 내비게이션 스택의 팝과 푸쉬
+1. 내비게이션 스택의 push
+> 네비게이션 스택에 새로운 뷰 컨트롤러가 푸쉬되면서 인스턴스가 생성되고, 내비게이션 스택에 추가
+
+2. 내비게이션 스택의 pop
+> 네비게이션 스택에 존재하는 뷰 컨트롤러가 팝 될 때 생성되었던 뷰컨트롤러의 인스턴스는 다른 곳에서 참조되고 있지 않다면 메모리에서 해제되고, 내비게이션 스택에서 삭제됨
+
+### UINavigationController 코드 사용법
+```
+// 루트 뷰 컨트롤러가 될 뷰 컨트롤러를 생성합니다.
+let rootViewController = UIViewController()
+// 위에서 생성한 뷰 컨트롤러로 내비게이션 컨트롤러를 생성합니다.
+let navigationController = UINavigationController(rootViewController: rootViewController)
+```
+
+### 네비게이션 바 지우기
+1. 스토리보드에서
+![네비게이션바지우기](./img/progect1/navigation2.png)
+2. 코드
+```
+navigationController?.isNavigationBarHidden = true
+```
+#### 참고
+- [UINavigationBar - UIKit](https://developer.apple.com/documentation/uikit/uinavigationbar)
+- [UINavigationController - UIKit](https://developer.apple.com/documentation/uikit/uinavigationcontroller)
 
 [돌아가기 > 배우는 내용](#배우는-내용)
