@@ -60,7 +60,7 @@ H.I.G는 앱을 개발할 때 필요한 디자인과 동작을 포함한 여러 
 
 ### 네비게이션 인터페이스란..
 > 뷰 이동을 계층적 구조(드릴 다운 인터페이스)로 사용되는 인터페이스이다.
-![계층적 구조](./img/project1/navigation1.png)
+![계층적 구조](./img/project2/navigation1.png)
 
 ### 네비게이션 컨트롤러는 왜 쓰는거지..?
 > 네비게이션 컨트롤러를 사용하게 되면 네비게이션 스택을 사용하여 다른 뷰 컨트롤러를 관리하게 되는데, 기본적으로 ios 화면전환은 stack과 같은 느낌이다.  인터페이스의 stack이란 화면이 바뀔 때마다 원래 있던 화면 위에 새 화면이 올라가는 형식인데 그래서 다시 이젠 화면으로 돌아갈 때엔 이전에 올렸던 화면을 빼야한다. 여기서 네이게이션 컨트롤러를 사용하면 뷰를 pop 하거나 push를 하기 용의해지는데, 뷰를 pop하게 되면 이전에 올라갔던 화면을 빼주는 역할을 하게 된다. + 추가요청..
@@ -82,7 +82,7 @@ let navigationController = UINavigationController(rootViewController: rootViewCo
 
 ### 네비게이션 바 지우기
 1. 스토리보드에서
-> ![네비게이션바지우기](./img/project1/navigation2.png)
+> ![네비게이션바지우기](./img/project2/navigation2.png)
 2. 코드
 ```
 navigationController?.isNavigationBarHidden = true
@@ -156,7 +156,7 @@ if let myViewController: MyViewController = storyboard.instantiateViewController
 	- 시간이 오래 걸리는 작업은 하지 않는 것이 좋음
 
 
-![뷰의 생명주기](./img/project1/ViewLifeCycle.png)
+![뷰의 생명주기](./img/project2/ViewLifeCycle.png)
 
 ### 뷰의 레이아웃 변화 메서드
 > 뷰가 생성된 후 bounds 및 위치 등의 레이아웃에 변화가 발생했을 때 호출되는 메서드
