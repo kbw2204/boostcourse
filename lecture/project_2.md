@@ -18,7 +18,7 @@
 	- UIStackView
 	- UIImagePickerController
 	- UIGestureRecognizer
-	- View Controller States Methods(#뷰의-상태변화-감지-메서드)
+	- [View Controller States Methods(뷰의 생명주기)](#뷰의-상태변화-감지-메서드)
 - Foundation
 	- DateFormatter
 - Swift
