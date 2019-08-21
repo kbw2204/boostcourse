@@ -14,7 +14,7 @@
 	- [Modality](#Modal)
 - UIKit
 	- UITextField
-	- UIDatePicker
+	- [UIDatePicker](#UIDatePicker)
 	- [UIStackView](#StackView)
 	- UIImagePickerController
 	- UIGestureRecognizer
