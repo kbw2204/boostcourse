@@ -4,7 +4,7 @@
 
 ## 강의 목차
 * [Project 2](https://github.com/kbw2204/boostcourse/blob/master/lecture/project_2.md)
-* Project 3
+* [Project 3](https://github.com/kbw2204/boostcourse/blob/master/lecture/project_3.md)
 * Project 4
 * Project 5
 
