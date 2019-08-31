@@ -10,11 +10,12 @@
 - UIKit
 	- [UITableView](#UITableView)
 	- [UITableViewCell](#UITableViewCell)
-	- View Reuse
+	- [View Reuse](#뷰의-재사용)
 	- Table View Cell Customize
+    - [Segue](#Segue)
 - Swift
-	- Codable
-	- JSONDecoder
+	- [Codable](#Codable)
+	- [JSONDecoder](#JSONDecoder-/-JSONEncoder)
 
 ## UITableView
 
@@ -126,5 +127,207 @@ class TableViewCell: UITableViewCell {
 - [TableView Programming Guide for ios](https://developer.apple.com/documentation/uikit/views_and_controls/table_views)
 - [Tables - Views - ios Human Interface Guideline](https://developer.apple.com/design/human-interface-guidelines/ios/views/tables/)
 
+
+[돌아가기 > 배우는 내용](#배우는-내용)
+
+## 뷰의 재사용
+
+> ios 기기는 한정된 메모리를 가지고 애플리케이션을 구동하기 때문에, 뷰를 재사용함으로써 메모리를 절약하고 성능 또한 향상시킬 수 있다.
+
+예
+
+- UITableViewCell
+- UICollectionViewCell
+
+### 재사용 원리
+
+1. 테이블뷰 및 컬렉션뷰에서 셀을 표시하기 위해 데이터 소스에 뷰(셀) 인스턴스를 요청
+2. 데이터 소스는 요청마다 새로운 셀을 만드는 대신 재사용 큐 (Reuse Queue)에 재사용을 위해 대기하고있는 셀이 있는지 확인 후 있으면 그 셀에 새로운 데이터를 설정하고, 없으면 새로운 셀을 생성
+3. 테이블뷰 및 컬렉션뷰는 데이터 소스가 셀을 반환하면 화면에 표시
+4. `사용자가 스크롤을 하게 되면 일부 셀들이 화면 밖으로 사라지면서 다시 재사용 큐에 들어감`
+5. 위의 1번부터 4번까지의 과정이 계속 반복.
+
+![img](./img/project3/reuse.png)
+
+#### 참고
+
+- [UITableView - UIKit](https://developer.apple.com/documentation/uikit/uitableview)
+
+
+[돌아가기 > 배우는 내용](#배우는-내용)
+
+## Segue
+
+> `Segue`는 스토리보드에서 뷰 컨트롤러 사이의 `화면전환`을 위해 사용하는 `객체`이다. 
+
+### 주요 프로퍼티
+- `var source: UIViewController` : 세그에 전환을 요청하는 뷰 컨트롤러
+- `var destination: UIViewController` : 전환될 뷰 컨트롤러
+- `var identifier: String?` : 세그 객체의 식별자입니다.
+
+### 주요 메서드
+
+- `func perform()` : 뷰 컨트롤러의 전환 메소드
+
+### Segue 연결 방법
+
+1. `스토리보드`에서 `버튼과 같은 객체`를 클릭 후 `ctrl` 키를 누른 상태에서 이동하고 싶은 뷰에 `드래그 엔 드랍` 합니다.
+2. Segue의 종류를 선택합니다.(기본: show)
+
+![img](./img/project3/segue.png)
+
+
+#### 참고
+
+- [UIStoryboardSegue - UIKit](https://developer.apple.com/documentation/uikit/uistoryboardsegue)
+
+
+[돌아가기 > 배우는 내용](#배우는-내용)
+
+## Codable
+
+스위프트 4 버전에서는 스위프트의 인스턴스를 다른 데이터 형태로 변환하고 그 반대의 역할을 수행하는 방법을 제공합니다. 스위프트의 인스턴스를 다른 데이터 형태로 변환할 수 있는 기능을 Encodable 프로토콜로 표현하였고, 그 반대의 역할을 할 수 있는 기능을 Decodable로 표현해 두었습니다. 그 둘을 합한 타입을 Codable로 정의해 두었습니다.
+
+> Swift의 인스턴스를 다른데이터로 변환하는 Encodable과 그 반대기능인 Decodable, 이 둘을 합한게 Codable!
+
+
+```
+typealias Codable = Decodable & Encodable
+```
+
+### 인코딩과 디코딩
+
+- `인코딩(Encoding)`은 정보의 형태나 형식을 표준화, 보안, 처리 속도 향상, 저장 공간 절약 등을 위해서 다른 형태나 형식으로 변환하는 처리 혹은 그 처리 방식
+- `디코딩(Decoding)`은 인코딩의 반대 작업을 수행하는 것
+
+#### Decodable : Swift 타입의 인스턴스로 `디코딩`할 수 있는 프로토콜
+
+#### Encodable : Swift 타입의 인스턴스를 `인코딩`할 수 있는 프로토콜
+
+### 선언 예제
+
+#### Codable
+
+Coordinate 타입과 Landmark 타입의 인스턴스를 다른 데이터 형식으로 변환하고 싶은 경우에 Codable 프로토콜을 준수하도록 하면 됩니다. Codable 타입의 프로퍼티는 모두 Codable 프로토콜을 준수하는 타입이어야 합니다. 스위프트의 기본 타입은 대부분 Codable 프로토콜을 준수합니다.
+
+```
+struct Coordinate: Codable {
+	var latitude: Double
+	var longitude: Double
+}
+
+struct Landmark: Codable {
+    var name: String
+    var foundingYear: Int
+    var vantagePoints: [Coordinate]
+    var metadata: [String: String]
+    var website: URL?
+}
+```
+
+#### CodingKey
+
+자주 사용하게 될 JSON 형태의 데이터로 상호 변환하고자 할 때는 기본적으로 인코딩/디코딩할 JSON 타입의 키와 애플리케이션의 사용자정의 프로퍼티가 일치해야 합니다. 만약 JSON의 키 이름을 구조체 프로퍼티의 이름과 다르게 표현하려면 타입 내부에 String 타입의 원시값을 갖는 CodingKeys라는 이름의 열거형을 선언하고 CodingKey 프로토콜을 준수하도록 하면 됩니다. CodingKeys 열거형 케이스의 이름은 해당 프로퍼티의 이름과 일치해야 합니다. 그리고 프로퍼티의 열거형 케이스의 값으로 매칭할 JSON 타입의 키를 할당하면 됩니다. 만약, JSON 타입의 키와 프로퍼티 이름이 일치한다면 값을 할당하지 않아도 무방합니다.
+
+```
+struct Landmark: Codable {
+    var name: String
+    var foundingYear: Int
+    var location: Coordinate
+    var vantagePoints: [Coordinate]
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "title"
+        case foundingYear = "founding_date"
+        
+        case location
+        case vantagePoints
+    }
+}
+```
+
+
+#### 참고
+
+- [Codable - Swift Standard Library](https://developer.apple.com/documentation/swift/codable)
+- [Encodable - Swift Standard Library](https://developer.apple.com/documentation/swift/encodable)
+- [Decodable - Swift Standard Library](https://developer.apple.com/documentation/swift/decodable)
+- [CodingKey - Swift Standard Library](https://developer.apple.com/documentation/swift/codingkey)
+
+[돌아가기 > 배우는 내용](#배우는-내용)
+
+## JSONDecoder / JSONEncoder
+
+> JSON 파일을 Swift에서 읽고 쓸 수 있게 하는 것, Swift 4부터 JSONDecoder가 Codable 프로토콜을 지원하기 때문에, 이를 이용해서 JSON 형식으로 인코딩 및 디코딩을 할 수 있다.
+
+### JSONEncoder 예제
+
+Codable 프로토콜을 준수하는 GroceryProduct 구조체의 인스턴스를 JSON 데이터로 인코딩하는 방법.
+
+```
+struct GroceryProduct: Codable {
+    var name: String
+    var points: Int
+    var description: String?
+}
+
+let pear = GroceryProduct(name: "Pear", points: 250, description: "A ripe pear.")
+
+let encoder = JSONEncoder()
+encoder.outputFormatting = .prettyPrinted
+
+do {
+	let data = try encoder.encode(pear)
+	print(String(data: data, encoding: .utf8)!)
+} catch {
+	print(error)
+}
+
+// ----- 출력
+ {
+   "name" : "Pear",
+   "points" : 250,
+   "description" : "A ripe pear."
+ }
+
+// Tip : encoder.outputFormatting = .prettyPrinted 설정하면 들여쓰기를 통해 가독성이 좋게 출력해줍니다.
+```
+
+### JSONDecoder 예제
+
+JSON 데이터를 Codable 프로토콜을 준수하는 GroceryProduct 구조체의 인스턴스로 디코딩하는 방법입니다.
+
+```
+struct GroceryProduct: Codable {
+    var name: String
+    var points: Int
+    var description: String?
+}
+
+/// 스위프트 4 버전부터 """를 통해 여러 줄 문자열을 사용할 수 있습니다.
+let json = """
+{
+    "name": "Durian",
+    "points": 600,
+    "description": "A fruit with a distinctive scent."
+}
+""".data(using: .utf8)!
+
+let decoder = JSONDecoder()
+
+do {
+	let product = try decoder.decode(GroceryProduct.self, from: json)
+	print(product.name)
+} catch {
+	print(error)
+}
+// ----- 출력 
+"Durian"
+```
+
+#### 참고
+
+- [JSONEncoder - Foundation](https://developer.apple.com/documentation/foundation/jsonencoder)
+- [JSONDecoder - Foundation](https://developer.apple.com/documentation/foundation/jsondecoder)
 
 [돌아가기 > 배우는 내용](#배우는-내용)
