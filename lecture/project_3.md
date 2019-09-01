@@ -246,6 +246,12 @@ struct Landmark: Codable {
 }
 ```
 
+### 사용법
+
+> JSON 파일을 읽을 swift 파일을 하나 선언한 후 Codable과 같이 선언을 하는데, JSON 파일 keyValue값 형식에 맞춰서 작성해 준 다음 다음에 배울 JSON파일을 swift 파일을 통해서 읽어주면 된다.
+
+
+
 
 #### 참고
 
