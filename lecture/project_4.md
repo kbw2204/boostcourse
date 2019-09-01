@@ -95,6 +95,95 @@ Photos FrameWork에는 ios 및 tvOS에서 사용자의 사진 라이브러리와
     - `PHAssetResourceManager` : 애샛과 관련된 리소스에 대한 기본 데이터 저장소에 접근하는 방법을 제공
     - `PHAssetResourceRequestOptions` : 에셋 리소스 관리자가 요청한 기본 에셋 데이터 전달에 영향을 주는 옵션
 
+### Photos FrameWork 사진 가져오기 예제
+
+```
+// VC.swift
+// info.plist에서 Privacy - Photo Library Usage Description 추가 (권한 메세지 String에 적어줌)
+
+import UIKit
+import Photos
+
+class ViewController: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet var tableView: UITableView!
+    
+    var fetchResult: PHFetchResult<PHAsset>!
+    let imageManager: PHCachingImageManager = PHCachingImageManager()
+    let cellId: String = "cellId"
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        let photoAurthorizationStatus = PHPhotoLibrary.authorizationStatus()
+        
+        switch photoAurthorizationStatus {
+        case .authorized:
+            print("접근 허가됨")
+            self.requestCollection()
+            self.tableView.reloadData()
+        case .denied:
+            print("접근 불허")
+        case .notDetermined:
+            print("아직 응답하지 않음")
+            PHPhotoLibrary.requestAuthorization({ (status) in
+                switch status {
+                case .authorized:
+                    print("사용자가 허용함")
+                    self.requestCollection()
+                    OperationQueue.main.addOperation {
+                        self.tableView.reloadData()
+                    }
+                    
+                case .denied:
+                    print("사용자가 불허함")
+                default:
+                    break
+                }
+            })
+        case .restricted:
+            print("접근 제한")
+        default:
+            print("err")
+        }
+        
+    }
+    
+    func requestCollection() {
+        let cameraRoll: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: nil)
+        
+        guard let cameraRollCollection = cameraRoll.firstObject else {
+            return
+        }
+        
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        self.fetchResult = PHAsset.fetchAssets(in: cameraRollCollection, options: fetchOptions)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.fetchResult?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellId, for: indexPath)
+        
+        let asset: PHAsset = fetchResult.object(at: indexPath.row)
+        
+        imageManager.requestImage(for: asset,
+                                  targetSize: CGSize(width: 30, height: 30),
+                                  contentMode: .aspectFill,
+                                  options: nil,
+                                  resultHandler: { image, _ in
+                                    cell.imageView?.image = image
+        })
+        
+        return cell
+    }
+}
+```
+
 #### 참고
 
 - [Photos](https://developer.apple.com/documentation/photos)
