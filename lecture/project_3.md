@@ -227,7 +227,7 @@ struct Landmark: Codable {
 
 #### CodingKey
 
-자주 사용하게 될 JSON 형태의 데이터로 상호 변환하고자 할 때는 기본적으로 인코딩/디코딩할 JSON 타입의 키와 애플리케이션의 사용자정의 프로퍼티가 일치해야 합니다. 만약 JSON의 키 이름을 구조체 프로퍼티의 이름과 다르게 표현하려면 타입 내부에 String 타입의 원시값을 갖는 CodingKeys라는 이름의 열거형을 선언하고 CodingKey 프로토콜을 준수하도록 하면 됩니다. CodingKeys 열거형 케이스의 이름은 해당 프로퍼티의 이름과 일치해야 합니다. 그리고 프로퍼티의 열거형 케이스의 값으로 매칭할 JSON 타입의 키를 할당하면 됩니다. 만약, JSON 타입의 키와 프로퍼티 이름이 일치한다면 값을 할당하지 않아도 무방합니다.
+> 쓰는 이유! ~ > JSON 파일의 key 값이 같아야 Codable를 사용할 수 있는데, 이 key값이 Swift 코딩 스타일과 다를경우... 이를 맞춰주기 위해서 ! 사용합니다 ~_~
 
 ```
 struct Landmark: Codable {
@@ -250,8 +250,12 @@ struct Landmark: Codable {
 
 > JSON 파일을 읽을 swift 파일을 하나 선언한 후 Codable과 같이 선언을 하는데, JSON 파일 keyValue값 형식에 맞춰서 작성해 준 다음 다음에 배울 JSON파일을 swift 파일을 통해서 읽어주면 된다.
 
+### Swift 코딩 스타일이란..?
 
-
+```
+1. class, enum 의 이름은 대문자 카멜표기법을 사용한다. 
+2. enum의 case이름은 소문자 카멜표기법을 사용한다.
+```
 
 #### 참고
 
