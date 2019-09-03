@@ -11,7 +11,7 @@
 	- [UITableView](#UITableView)
 	- [UITableViewCell](#UITableViewCell)
 	- [View Reuse](#뷰의-재사용)
-	- Table View Cell Customize
+	- [Table View Cell Customize](#TableViewCell-Customize-만들기)
     - [Segue](#Segue)
 - Swift
 	- [Codable](#Codable)
@@ -120,6 +120,35 @@ class TableViewCell: UITableViewCell {
 ![img](./img/project3/tableViewCell5.png)
 ![img](./img/project3/tableViewCell6.png)
 
+### TableViewCell Customize 만들기
+
+1. 커스텀셀을 위한 swift 파일 하나를 만든다.
+
+```
+import UIKit
+
+class TableViewCell: UITableViewCell {
+    // 사용할 것들 정의
+    @IBOutlet var imgView: UIImageView!
+    @IBOutlet var name: UILabel!
+}
+```
+
+2. cell을 Storyboard의 cell에 class를 연결해주고, cell 인터페이스를 꾸며준다.
+
+3. 사용하려는 tableView에 연동된 위치에 tableview 의 cell 정의 부분을 커스텀 셀로 지정해준다.
+
+```
+ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    guard let cell = self.TableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? TableViewCell else {
+            fatalError("Could not dequeue cell with identifier: TableViewCell")
+        }
+
+        return cell
+    }
+```
+
 
 #### 참고
 
@@ -208,19 +237,13 @@ typealias Codable = Decodable & Encodable
 
 #### Codable
 
-Coordinate 타입과 Landmark 타입의 인스턴스를 다른 데이터 형식으로 변환하고 싶은 경우에 Codable 프로토콜을 준수하도록 하면 됩니다. Codable 타입의 프로퍼티는 모두 Codable 프로토콜을 준수하는 타입이어야 합니다. 스위프트의 기본 타입은 대부분 Codable 프로토콜을 준수합니다.
+> `Codable`은 JSON 파일 형식을 Swift로 사용할 수 있도록 해주는 `타입`이다. 사용하기 위해선 JSON 파일의 Key값이 일치해야 사용이 가능하다.
 
 ```
-struct Coordinate: Codable {
-	var latitude: Double
-	var longitude: Double
-}
-
-struct Landmark: Codable {
+struct People: Codable {
     var name: String
-    var foundingYear: Int
-    var vantagePoints: [Coordinate]
-    var metadata: [String: String]
+    var phoneNumber: String
+    var age: Int
     var website: URL?
 }
 ```
@@ -333,6 +356,8 @@ do {
 }
 // ----- 출력 
 "Durian"
+
+// 출처 : edwith
 ```
 
 #### 참고
