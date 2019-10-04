@@ -52,6 +52,13 @@ Photos FrameWork에는 ios 및 tvOS에서 사용자의 사진 라이브러리와
 - 에셋과 미리보기 로딩 및 캐싱
 - 에셋 콘텐츠 편집
 
+### Photos 프레임워크 전체적인 큰 틀
+
+> PHAssetCollection(앨범 뭉탱이) ~ PHCollection(앨범) ~ PHAsset(사진) ~(ImageManager를 통해 이미지 추출) UIImage()
+
+즉 이미지를 사용할려면 맨 꼭대이긴 앨범뭉탱이(PHAssetCollection)을 가져와야 하고, 그 중에서 특정앨범을(PHCollection)을 선택해서 그 앨범 안에 있는 사진(PHAsset - > UIImage)를 가져와서 사용하는 메커니즘..
+
+
 ### Photos 관련 객체
 
 - Photos 라이브러리 상호작용
@@ -174,6 +181,20 @@ Photos FrameWork에는 ios 및 tvOS에서 사용자의 사진 라이브러리와
 ### Operation Queue란..?
 
 `Operation`는 작업과 관련된 코드와 데이터를 나타내는 `추상 클래스`, `Queue`는 대기열, 즉 `Operation Queue`는 작업을 관리하고 대기열의 동작을 관리하는 역할을 한다.
+
+### 사용 예시
+
+```
+OperationQueue.main.addOperation {
+	// 소스코드 작성
+	// UI 업데이트 작업은 main쓰레드에서 작업해야함.
+ }
+ 
+ // DispatchQueue 라는 것도 있음
+ DispatchQueue.main.async {
+	// 소스코드 작성, 이건 위에것과 다르게 직방으로 먼저 실행됨..
+ }
+```
 
 ### OperationQueue의 주요 메서드 / 프로퍼티
 
