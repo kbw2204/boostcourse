@@ -8,6 +8,6 @@
 * [Project 4](./lecture/project_4.md)
 * [Project 5](./lecture/project_5.md)
 
-## 카테고리별 정리
+
 
 
