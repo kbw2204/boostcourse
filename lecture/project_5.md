@@ -104,7 +104,6 @@ UIAlertController안에 있는 Action 중, `Style.cancel`은 하나만 존재해
 ### 생성 방법 (programmatically)
 
 ```
-// 왜 안되지..
 import UIKit
 
 class TabBarControllerByCode: UIViewController {
@@ -129,6 +128,7 @@ class TabBarControllerByCode: UIViewController {
             UINavigationController(rootViewController: $0)
         }
         self.view.addSubview(tabBarController.view)
+        self.addChild(tabBarController)
     }
 }
 ```
