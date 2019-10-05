@@ -48,6 +48,35 @@
 - 새 작업 창을 열거나, 종료 여부 확인 시
 - 사용자의 결정을 되돌리거나 그 동작이 중요하지 않을 경우
 
+### 사용 예시
+
+```
+// 1. 컨트롤러를 정의해줌
+let alertController: UIAlertControll = UIAlertController(title: "Title", message: "Message", preferredStyle: style)
+
+// 2. 컨트롤러에 넣을 버튼을 만들어준다. 타입 종류는 3가지, default, cancel, destructive 가 있음
+// handler 부분이 있는데, 이부분에 액션이 실행 성공시 작동하는 부분을 설정해 줄 수 있음, 필요없을시 handler부분에 nil 넣어주면 됨
+let okAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {(action: UIAlertAction) in
+	print("OK pressed")
+})
+
+// 3. 만들어준 Action을 컨트롤러에 추가해줌
+alertController.addAction(okAction)
+
+// alertController가 화면에 나타날 수 있도록 present 해준다.
+self.present(alertController, animated: true, completion: {
+	print("Alert controller shown")
+})
+```
+
+### 주요 메서드
+
+`func addTextField(configurationHandler: (UITextField) -> Void?)`
+
+### 주의할 점
+
+UIAlertController안에 있는 Action 중, `Style.cancel`은 하나만 존재해야 한다. 그 이유는... **찾을예정..ㅋ..**
+
 
 #### 참고
 
