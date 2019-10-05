@@ -5,6 +5,7 @@
 - UIKit
 	- [UIAlertController](#UIAlertController)
 	- [UITabBarController](#UITabBarController)
+- [Dispatch](#Grand-Cetral-Dispatch)
 
 ## UIAlertController
 
@@ -150,3 +151,33 @@ class TabBarControllerByCode: UIViewController {
 
 [돌아가기 > 배우는 내용](#배우는-내용)
 
+
+## Grand Cetral Dispatch
+
+> 줄여서 **GCD**.. 멀티코어와 멀티 프로세싱 환경에서 최적화된 프로그래밍을 할 수 있도록 애플이 개발한 기술.. 실행할 태스크를 Dispatch Queue에 추가하면 GCD는 태스크(작업)에 맞는 스레드를 자동으로 생성해서 실행하고, 작업이 종료되면 해당 스레드를 제거합니다.
+
+### DispatchQueue는 뭐야??
+
+> 디스패치큐는 작업을 연속적 or 동시에 진행하기는 하지만, 언제나 먼저 들어오면 먼저 나가는 순서로 실행됩니다. Serial Dispatch Queue는 한 번에 하나의 작업만을 실행하며, 해당 작업이 대기열에서 제외되고 새로운 작업이 시작되기 전까지 기다립니다. 이와는 반대로 Concurrent Dispatch Queue는 이미 시작된 작업이 완료될 때까지 기다리지 않고 가능한 많은 작업을 진행합니다. 디스패치큐는 GCD 기술의 일부 입니다.
+
+![](./img/project5/dispatchQueue1.png)
+
+### OperationQueue vs DispatchQueue
+
+- Operation Queue에서는 동시에 실행할 수 있는 연산(Operation)의 최대 수를 지정할 수 있습니다.
+- Operation Queue에서는 KVO(Key Value Observing)을 사용할 수 있는 많은 프로퍼티들이 있습니다.
+- Operation Queue에서는 연산(Operation)을 일시 중지, 다시 시작 및 취소를 할 수 있습니다.
+
+### 둘 중에 어떤거 사용해야해?
+
+- **Operation Queue** : 비동기적으로 실행되어야 하는 작업을 객체 지향적인 방법으로 사용하는 데 적합합니다. KVO(key Value Observing)를 사용해 작업 진행 상황을 감시하는 방법이 필요할 때도 적합합니다.
+- **GCD** : 작업이 복잡하지 않고 간단하게 처리하거나 특정 유형의 시스템 이벤트를 비동기적으로 처리할 때 적합합니다. 예를 들면 타이머, 프로세스 등의 관련 이벤트입니다.
+
+// 아직 잘 모르겠다.. 더 알아봐야 겠다.
+
+#### 참고
+
+- [Dispatch - Apple Developer Documentation](https://developer.apple.com/documentation/dispatch)
+- [Grand Central Dispatch - Wikipedia](https://en.wikipedia.org/wiki/Grand_Central_Dispatch)
+
+[돌아가기 > 배우는 내용](#배우는-내용)
