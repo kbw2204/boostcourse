@@ -4,6 +4,7 @@
 
 - UIKit
 	- [UIAlertController](#UIAlertController)
+	- [UITabBarController](#UITabBarController)
 
 ## UIAlertController
 
@@ -75,7 +76,7 @@ self.present(alertController, animated: true, completion: {
 
 ### 주의할 점
 
-UIAlertController안에 있는 Action 중, `Style.cancel`은 하나만 존재해야 한다. 그 이유는... **찾을예정..ㅋ..**
+UIAlertController안에 있는 Action 중, `Style.cancel`은 하나만 존재해야 한다. 그 이유는... **못찾겠다..ㅋ.. 하면 오류뜨는데;**
 
 
 #### 참고
@@ -84,3 +85,68 @@ UIAlertController안에 있는 Action 중, `Style.cancel`은 하나만 존재해
 - [UIAlertAction - UIKit](https://developer.apple.com/documentation/uikit/uialertaction)
 
 [돌아가기 > 배우는 내용](#배우는-내용)
+
+
+## UITabBarController
+
+> Inherits From: UIViewController
+
+### 생성 방법 (in Storyboard)
+
+#### 1. View 끼리 묶기 ( View 다중 선택 후)
+
+![](./img/project5/tabbar2.png)
+
+#### 2. TabBarController에서 View 추가하기
+
+![](./img/project5/tabbar1.png)
+
+### 생성 방법 (programmatically)
+
+```
+// 왜 안되지..
+import UIKit
+
+class TabBarControllerByCode: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // tabBarController 정의
+        let tabBarController: UITabBarController = UITabBarController()
+        // 추가할 뷰들 정의..
+        let firstV = ViewController()
+        firstV.title = "firstView"
+        firstV.view.backgroundColor = UIColor.orange
+        firstV.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        
+        let VC = UIViewController()
+        VC.title = "secondView"
+        VC.view.backgroundColor = UIColor.black
+        VC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        // 적용
+        let controllers = [firstV, VC]
+        tabBarController.viewControllers = controllers
+        tabBarController.viewControllers = controllers.map{
+            UINavigationController(rootViewController: $0)
+        }
+        self.view.addSubview(tabBarController.view)
+    }
+}
+```
+
+### [UITabBarControllerDelegate(링크)](https://developer.apple.com/documentation/uikit/uitabbarcontrollerdelegate)
+
+> 사용자가 탭바 인터페이스와 상호작용할 때, 탭바 컨트롤러 객체는 이 상호작용에 관한 알림(notification)을 델리게이트 인스턴스로 보낸다. 
+
+- 사용자가 탭을 선택하지 못하게 하거나,
+- 탭을 선택한 후 추가 작업을 수행하거나, 
+- 탭 관련 사항을 모니터링하고 사용자화할 때 델리게이트를 활용..
+
+
+#### 참고
+
+- [UITabBarController - UIKit](https://developer.apple.com/documentation/uikit/uitabbarcontroller)
+- [UITabBarControllerDelegate - UIKit](https://developer.apple.com/documentation/uikit/uitabbarcontrollerdelegate)
+- [Haman Interface Guidelines for iOS - Tab Bars](https://developer.apple.com/design/human-interface-guidelines/ios/bars/tab-bars/)
+
+[돌아가기 > 배우는 내용](#배우는-내용)
+
