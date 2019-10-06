@@ -159,7 +159,7 @@ class TabBarControllerByCode: UIViewController {
 
 ### DispatchQueue는 뭐야??
 
-- 디스패치큐는 **작업을 연속적 or 동시에 진행**하기는 하지만, 언제나 먼저 들어오면 먼저 나가는 순서로 실행**(FIFO 큐)**됩니다. **Serial Dispatch Queue(default)**는 한 번에 하나의 작업만을 실행하며, 해당 작업이 대기열에서 제외되고 새로운 작업이 시작되기 전까지 기다립니다. 이와는 반대로 **Concurrent Dispatch Queue**는 이미 시작된 작업이 완료될 때까지 기다리지 않고 가능한 많은 작업을 진행합니다. **DispatchQueue의 장점**은 일반 스레드 코드보다 쉽고 효율적으로 코드를 작성할 수 있다는 점입니다.  디스패치큐는 GCD 기술의 일부 입니다.
+> 디스패치큐는 **작업을 연속적 or 동시에 진행**하기는 하지만, 언제나 먼저 들어오면 먼저 나가는 순서로 실행 **(FIFO 큐)**됩니다. **Serial Dispatch Queue(default)**는 한 번에 하나의 작업만을 실행하며, 해당 작업이 대기열에서 제외되고 새로운 작업이 시작되기 전까지 기다립니다. 이와는 반대로 **Concurrent Dispatch Queue**는 이미 시작된 작업이 완료될 때까지 기다리지 않고 가능한 많은 작업을 진행합니다. **DispatchQueue의 장점**은 일반 스레드 코드보다 쉽고 효율적으로 코드를 작성할 수 있다는 점입니다.  디스패치큐는 GCD 기술의 일부 입니다.
 
 
 ### Grand Cetral Dispatch
