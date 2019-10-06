@@ -177,11 +177,14 @@ Photos FrameWork에는 ios 및 tvOS에서 사용자의 사진 라이브러리와
 
 ## OperationQueue
 
-> 연산의 실행을 관리하고 대기열의 동작관리를 한다.
+> class OperationQueue: NSObjectm
 
-### Operation Queue란..?
+### OperationQueue란..?
 
-`Operation`는 작업과 관련된 코드와 데이터를 나타내는 `추상 클래스`, `Queue`는 대기열, 즉 `Operation Queue`는 작업을 관리하고 대기열의 동작을 관리하는 역할을 한다.
+OperationQueue는 작업 우선 순위와 준비 상태에 따라 대기중인 객체를 실행합니다. 가장 중요한 요소는 주어진 작업이 다른 작업이 끝나는 것에 의존하는 지의 여부입니다. 프로그래머는 이러한 의존성을 설정하여 복잡한 실행 순서 그래프를 구성할 수도 있습니다. 작업 대기열에 추가 된 후에는 작업이 끝났다고보고 될 때까지 작업이 대기열에 남아 있습니다. 작업이 추가 된 후에는 대기열에서 직접 작업을 제거 할 수 없습니다. 완료되지 않은 작업으로 OperationQueue를 일시중단하면 메모리 누수가 발생할 수 있습니다.
+
+**+** OperationQueue에 들어가는 작업은 반드시 Operation 객체의 인스턴스여야만 합니다. 이는 수행하고자 하는 작업과 데이터를 캡슐화한 객체입니다. 다만 Operation은 추상 클래스이기 때문에, 시스템이 제공하는 Operation 타입의 구체 클래스를 쓰거나 직접 서브클래싱을 해서 써야합니다. Operation객체는 KVO(Key-Value Observing)을 위한 프로퍼티들을 제공하여 주기 때문에, 이를 통해 작업의 진행상황을 모니터링 할 수 있습니다. 또한 OperationQueue 자체는 여러 작업을 동시에 수행하지만, 의존성을 설정하는 것으로 순차적으로 실행하게 만들 수도 있습니다.
+
 
 ### 사용 예시
 
@@ -279,6 +282,7 @@ var name: String? { get set }​
 
 - [OperationQueue - Foundation](https://developer.apple.com/documentation/foundation/operationqueue)
 - [Operation - Foundation](https://developer.apple.com/documentation/foundation/operation)
+- [DispatchQueue - Joshua blog](https://jcsoohwancho.github.io/2019-09-04-동시성-프로그래밍(1)-동시성-기본/)
 
 [돌아가기 > 배우는 내용](#배우는-내용)
 
@@ -461,5 +465,6 @@ self.present(activityViewController, animated: true, completion: nil)
 - [UIActivityItem Source - UIKit](https://developer.apple.com/documentation/uikit/uiactivityitemsource)
 - [UIActivityViewController - UIKit](https://developer.apple.com/documentation/uikit/uiactivityviewcontroller)
 - [UIActivity - UIKit](https://developer.apple.com/documentation/uikit/uiactivity)
+
 
 [돌아가기 > 배우는 내용](#배우는-내용)
