@@ -6,7 +6,7 @@
 	- [UIAlertController](#UIAlertController)
 	- [UITabBarController](#UITabBarController)
 - Foundation
-	- [Notification](#Notification,-NotificationCenter)
+	- [Notification](#Notification-&-NotificationCenter)
 - [DispatchQueue](#DispatchQueue)
 
 ## UIAlertController
@@ -250,7 +250,7 @@ DispatchQueue.main.async {
 
 
 
-## Notification, NotificationCenter
+## Notification & NotificationCenter
 
 ### Notification이란..?
 
