@@ -310,7 +310,7 @@ addObserver(_:selector:name:object:)addObserver(forName:object:queue:using:)
 #### - 옵저버 등록
 ```
 // 등록
- NotificationCenter.default.addObserver(self, selector: #selector(didRecieveTestNotification(_:)), name: NSNotification.Name("TestNotification"), object: nil)
+NotificationCenter.default.addObserver(self, selector: #selector(didRecieveTestNotification(_:)), name: NSNotification.Name("TestNotification"), object: nil)
  
  // 실행 될 메소드
 @objc func didRecieveTestNotification(_ notification: Notification) {
@@ -319,7 +319,13 @@ addObserver(_:selector:name:object:)addObserver(forName:object:queue:using:)
 ```
 #### - 발송자
 ```
-NotificationCenter.default.post(name: NSNotification.Name("TestNotification"), object: nil, userInfo: nil)​
+// 예를들어서
+func request() {
+	NotificationCenter.default.post(name: NSNotification.Name("TestNotification"), object: nil, userInfo: nil)​
+}
+// 이렇게 작성되어 있으면 @objc func이 실행됬음 하는 부분에 호출 해주면 노티를 보내고
+// 등록된  NotificationCenter에서 노티를 받고 작동이 됨. 
+request() 
 ```
 
 ### 예제2(User Info 정보를 담은 노티피케이션)
