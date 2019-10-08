@@ -7,3 +7,7 @@
 * [Project 3](./lecture/project_3.md)
 * [Project 4](./lecture/project_4.md)
 * [Project 5](./lecture/project_5.md)
+
+## [CS 50 ( 추가 정리 )](./cs/cs50.md)
+
+
