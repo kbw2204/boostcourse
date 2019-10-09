@@ -89,6 +89,26 @@ class TableViewCell: UITableViewCell {
 	- 정보를 특정 기준에 따라 개념적으로 구분할 때 적합
 	- 사용자가 정보를 빠르게 이해하는 데 도움(전화번호부 ㄱㄴㄷ순 정리)
 
+### reloadData() VS reloadSection()
+
+1. reloadData()
+```
+func reloadData()
+```
+
+> 셀, 섹션 머리글 및 바닥 글, 익덱스 배열 등 (테이블 or Collection)을 구성하는 데 사용되는 모든 데이터를 다시 로드함
+
+2. reloadSection()
+```
+// 지정된 애니메이션 효과를 사용하여 지정된 섹션을 다시 로드
+func reloadSections(_ sections: IndexSet, 
+with animation: UITableView.RowAnimation)
+```
+
+> Table or Collection 의 데이터 소스에 지정된 **섹션**에 대해 새로운 셀을 요청. 
+
+
+
 #### 참고
 
 - [UITableView - UIKit](https://developer.apple.com/documentation/uikit/uitableview)
