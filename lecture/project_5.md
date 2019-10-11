@@ -451,6 +451,15 @@ let userInfo: [AnyHashable: Any] = ["TestString":"Hi"]
 NotificationCenter.default.post(name: NSNotification.Name("TestNotification"), object: nil, userInfo: userInfo)​
 ```
 
+### 추가 핸들러 func 만들기 예제
+
+```
+let handler: (UIAlertAction) -> Void
+handler = { (action: UIAlertAction) in
+ ...
+ }
+```
+
 
 #### 참고
 
