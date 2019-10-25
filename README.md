@@ -746,7 +746,24 @@ class TableViewCell: UITableViewCell {
 
 ### 주요 메서드
 
-- `func perform()` : 뷰 컨트롤러의 전환 메소드
+~~~
+// 세그값을 설정함
+performSegue(withIdentifier: "Segue 이름", sender: 전달할 값)
+
+// 위 메소드가 발생하면 Segue값과 sender를 인자로 하는 메소드가 실행됨.
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "movieSegue" {
+            guard let indexPath = sender as? IndexPath else {
+                return
+            }
+            // 목적지를 설정하여
+            let vc = segue.destination as? MovieInfoViewController
+            // 해당 ViewController에 값을 전달할 수 있음
+            vc?.navigationItem.title = MovieData.shared.movies[indexPath.row].title
+            vc?.movieId = MovieData.shared.movies[indexPath.row].id
+        }
+    }
+~~~
 
 ### Segue 연결 방법
 
