@@ -278,7 +278,7 @@ func textFieldShouldReturn(UITextField)
 
 
 ## 싱글턴
-> ios 애플리케이션 디자인 패턴 중 하나로 '특정 클래스의 인스턴스가 오직 하나임을 보장하는 객체'를 의미한다. 싱글턴은 애플리케이션이 요청한 **횟수와는 관계없이** 이미 생성된 같은 인스턴스를 반환한다. 즉 애플리케이션 내에서 특정 클래스의 인스턴스가 딱 하나만 있기 때문에 다른 인스턴스들이 공요해서 사용할 수 있다.
+> ios 애플리케이션 디자인 패턴 중 하나로 **'특정 클래스의 인스턴스가 오직 하나임을 보장하는 객체'를 의미한다.** 싱글턴은 애플리케이션이 요청한 횟수와는 관계없이 이미 생성된 같은 인스턴스를 반환한다. 즉 애플리케이션 내에서 특정 클래스의 인스턴스가 딱 하나만 있기 때문에 다른 인스턴스들이 공요해서 사용할 수 있다.
 
 
 ![singleton](./img/project2/singleton.png)
@@ -310,19 +310,19 @@ class Singleton {
 
 - FileManager
 	- 애플리케이션 파일 시스템을 관리하는 클래스
-	- FileManager.default
+	- **FileManager.default**
 - URLSession
 	- URL 세션을 관리하는 클래스
-	- URLSession.shared
+	- **URLSession.shared**
 - NotificationCenter
 	- 등록된 알림의 정보를 사용할 수 있게 해주는 클래스
-	- NotificationCenter.default
+	- **NotificationCenter.default**
 - UserDefaults
 	- Key-Value 형태로 간단한 데이터를 저장하고 관리할 수 있는 인터페이스를 제공하는 데이터베이스 클래스
-	- UserDefaults.standard
+	- **UserDefaults.standard**
 - UIAoolication
 	- ios에서 실행되는 중앙제어 애플리케이션 객체
-	- UIApplication.shared
+	- **UIApplication.shared**
 
 #### 주의할 점
 싱글턴 디자인 패턴은 애플리케이션 내의 특정 클래스의 인스턴스가 하나만 존재하기에, 불필요하게 여러 개 만들어질 필요가 없는 경우에 많이 쓰인다. 예를 들어서 환경설정, 네트워크 연결처리, 데이터 관리 등이 있다.
