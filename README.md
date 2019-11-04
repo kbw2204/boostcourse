@@ -1,6 +1,8 @@
-# [부스트코스] IOS 프로그래밍 정리md
+# IOS 프로그래밍 정리md
 
 > [Edwith](https://www.edwith.org), Apple 개발자 문서에서 공부한 내용들을 정리해서 올리는 repo 입니다.
+
+### [오류 해결책(오답노트)](./solution.md)
 
 ## 강의 목차
 * [Project 2](./lecture/project_2.md)
