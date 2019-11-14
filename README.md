@@ -3,7 +3,7 @@
 > [Edwith](https://www.edwith.org), Apple 개발자 문서에서 공부한 내용들을 정리해서 올리는 repo 입니다.
 
 ### [오류 해결책(오답노트)](./solution.md)
-### [Swift extension 모음](./extension.md)
+### [Swift extension 모음](./extenstion.md)
 
 ## 강의 목차
 * [Project 2](./lecture/project_2.md)
