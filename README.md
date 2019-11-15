@@ -4,12 +4,7 @@
 
 ### [오류 해결책(오답노트)](./solution.md)
 ### [Swift extension 모음](./extenstion.md)
-
-## 강의 목차
-* [Project 2](./lecture/project_2.md)
-* [Project 3](./lecture/project_3.md)
-* [Project 4](./lecture/project_4.md)
-* [Project 5](./lecture/project_5.md)
+### [CS 50 ( 추가 정리 )](./cs/cs50.md)
 
 ## 배우는 내용
 
@@ -57,10 +52,11 @@
 	- [OperationQueue](#OperationQueue)
 	- [DispatchQueue](#DispatchQueue)
 
-
-
-## [CS 50 ( 추가 정리 )](./cs/cs50.md)
-
+## 강의 목차
+* [Project 2](./lecture/project_2.md)
+* [Project 3](./lecture/project_3.md)
+* [Project 4](./lecture/project_4.md)
+* [Project 5](./lecture/project_5.md)
 
 ## Human Interface Guideline
 H.I.G는 앱을 개발할 때 필요한 디자인과 동작을 포함한 여러 규칙을 통하여 사용자가 인터페이스를 구성하는 방법에 대한 지침이다.
