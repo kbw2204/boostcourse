@@ -47,6 +47,7 @@
 	- [Codable](#Codable)
 	- [JSONDecoder](#JSONDecoder-/-JSONEncoder)
 	- [ATS(App Transport Security)](#ATS)
+	- [함수객체](#함수객체)
 - Concurrency Programming(실시간 프로그래밍)
 	- [Asynchronous Programming](#동시성-프로그래밍과-비동기-프로그래밍)
 	- [OperationQueue](#OperationQueue)
@@ -1952,3 +1953,14 @@ guard let img = image else {
     return
 }
 ~~~
+
+## 함수객체
+
+> 함수객체는 고차함수(map, reduce, filter)를 적용 할 수 있는 컨테이너 타입.. 
+
+Swift에서의 함수객체
+- Array
+- Dictionary
+- set
+
+등이 있다.
