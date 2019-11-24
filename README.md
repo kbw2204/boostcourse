@@ -14,47 +14,59 @@
 <li><a href = "#photos-FrameWork"><code>Photos</code></a></li>
 </details>
 
-- 디자인 패턴
-	- [Delegation Pattern](#Delegation)
-	- [Singleton](#싱글턴)
-	- [Targte-Action](#Target-Action-디자인-패턴)
-- 화면전환
-	- [네비게이션 인터페이스](#네비게이션-인터페이스)
-	- [Modality](#Modal)
-- UIKit
-	- [UITextField](#UITextField)
-	- [UIDatePicker](#UIDatePicker)
-	- [UIStackView](#StackView)
-	- UIImagePickerController
-	- [UIGestureRecognizer](#Gesture-Recognizer)
-	- [View Controller States Methods(뷰의 생명주기)](#뷰의-상태변화-감지-메서드)
-	- [UITableView](#UITableView)
-	- [UITableViewCell](#UITableViewCell)
-	- [UICollectionView](#UICollectionView)
-	- [UIAlertController](#UIAlertController)
-	- [UITabBarController](#UITabBarController)
-	- [UINavigationItem]
-    - [UIBarButtonItem]
-    - [UIScrollView](#UIScrollView)
-    - [UIActivityViewController](#UIActivityViewController)
-	- [View Reuse](#뷰의-재사용)
-	- [Table View Cell Customize](#TableViewCell-Customize-만들기)
-    - [Segue](#Segue)
-- Foundation
-	- [DateFormatter](#DateFormatter)
-	- [URLSession](#URLSession)
-	- [Notification](#Notification)
-- Swift
-	- Dictionary의 활용
-	- [guard 사용법](#guard)
-	- [Codable](#Codable)
-	- [JSONDecoder](#JSONDecoder-/-JSONEncoder)
-	- [ATS(App Transport Security)](#ATS)
-	- [함수객체](#함수객체)
-- Concurrency Programming(실시간 프로그래밍)
-	- [Asynchronous Programming](#동시성-프로그래밍과-비동기-프로그래밍)
-	- [OperationQueue](#OperationQueue)
-	- [DispatchQueue](#DispatchQueue)
+<details><summary>디자인 패턴</summary>
+<li><a href = "#Delegation"><code>Delegation Pattern</code></a></li>
+<li><a href = "#싱글턴"><code>Singleton</code></a></li>[Singleton](#싱글턴)
+<li><a href = "#Target-Action-디자인-패턴"><code>Targte-Action</code></a></li>
+</details>
+
+<details><summary>화면전환</summary>
+<li><a href = "#네비게이션-인터페이스"><code>네비게이션 인터페이스</code></a></li>
+<li><a href = "#Modal"><code>Modality</code></a></li>
+</details>
+
+<details><summary>UIKit</summary>
+<li><a href = "#UITextField"><code>UITextField</code></a></li>
+<li><a href = "#UIDatePicker"><code>UIDatePicker</code></a></li>
+<li><a href = "#StackView"><code>UIStackView</code></a></li>
+<li><a href = "#"><code>UIImagePickerController</code></a></li>
+<li><a href = "#Gesture-Recognizer"><code>UIGestureRecognizer</code></a></li>
+<li><a href = "#뷰의-상태변화-감지-메서드"><code>뷰의 생명주기</code></a></li>
+<li><a href = "#UITableView"><code>UITableView</code></a></li>
+<li><a href = "#UITableViewCell"><code>UITableViewCell</code></a></li>
+<li><a href = "#UICollectionView"><code>UICollectionView</code></a></li>
+<li><a href = "#UIAlertController"><code>UIAlertController</code></a></li>
+<li><a href = "#UITabBarController"><code>UITabBarController</code></a></li>
+<li><a href = "#"><code>UINavigationItem</code></a></li>
+<li><a href = "#"><code>UIBarButtonItem</code></a></li>
+<li><a href = "#UIScrollView"><code>UIScrollView</code></a></li>
+<li><a href = "#UIActivityViewController"><code>UIActivityViewController</code></a></li>
+<li><a href = "#뷰의-재사용"><code>View Reuse</code></a></li>
+<li><a href = "#TableViewCell-Customize-만들기"><code>Table View Cell Customize</code></a></li>
+<li><a href = "#Segue"><code>Segue</code></a></li>
+</details>
+
+<details><summary>Foundation</summary>
+<li><a href = "#DateFormatter"><code>DateFormatter</code></a></li>
+<li><a href = "#URLSession"><code>URLSession</code></a></li>
+<li><a href = "#Notification"><code>Notification</code></a></li>
+</details>
+
+<details><summary>Swift</summary>
+<li><a href = "#"><code>Dictionary의 활용</code></a></li>[](#)	
+<li><a href = "#guard"><code>guard 사용법</code></a></li>[](#)
+<li><a href = "#Codable"><code>Codable</code></a></li>[](#)
+<li><a href = "#JSONDecoder-/-JSONEncoder"><code>JSONDecoder</code></a></li>
+<li><a href = "#ATS"><code>ATS(App Transport Security)</code></a></li>
+<li><a href = "#함수객체"><code>함수객체</code></a></li>
+</details>
+
+<details><summary>Concurrency Programming(실시간 프로그래밍)</summary>
+<li><a href = "#동시성-프로그래밍과-비동기-프로그래밍"><code>Asynchronous Programming</code></a></li>
+<li><a href = "#OperationQueue"><code>OperationQueue</code></a></li>
+<li><a href = "#DispatchQueue"><code>DispatchQueue</code></a></li>
+</details>
+
 
 ## 강의 목차
 * [Project 2](./lecture/project_2.md)
