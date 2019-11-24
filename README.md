@@ -2,9 +2,9 @@
 
 > [Edwith](https://www.edwith.org), Apple 개발자 문서에서 공부한 내용들을 정리해서 올리는 repo 입니다.
 
-### [오류 해결책(오답노트)](./solution.md)
-### [Swift extension 모음](./extenstion.md)
-### [CS 50 ( 추가 정리 )](./cs/cs50.md)
+<li><a href = "./solution.md"><code>오류 해결책(오답노트)</code></a></li>
+<li><a href = "./extenstion.md"><code>Swift extension 모음</code></a></li>
+<li><a href = "./cs/cs50.md"><code>CS 50(추가 정리)</code></a></li>
 
 ## 배우는 내용
 
