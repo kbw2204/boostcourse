@@ -8,9 +8,12 @@
 
 ## 배우는 내용
 
-- [Human Interface Guideline](#Human-Interface-Guideline)
-- FrameWork
-    - [Photos](#photos-FrameWork)
+[Human Interface Guideline](#Human-Interface-Guideline)
+
+<details><summary>FrameWork</summary>
+<li><a href = "#photos-FrameWork"><code>Photos</code></a></li>
+</details>
+
 - 디자인 패턴
 	- [Delegation Pattern](#Delegation)
 	- [Singleton](#싱글턴)
