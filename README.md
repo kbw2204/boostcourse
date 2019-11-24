@@ -1,4 +1,4 @@
-# IOS 프로그래밍 정리md
+# iOS 프로그래밍 정리md
 
 > [Edwith](https://www.edwith.org), Apple 개발자 문서에서 공부한 내용들을 정리해서 올리는 repo 입니다.
 
@@ -8,7 +8,7 @@
 
 ## 배우는 내용
 
-[Human Interface Guideline](#Human-Interface-Guideline)
+<li><a href = "#Human-Interface-Guideline"><code>Human Interface Guideline</code></a></li>
 
 <details><summary>FrameWork</summary>
 <li><a href = "#photos-FrameWork"><code>Photos</code></a></li>
@@ -16,7 +16,7 @@
 
 <details><summary>디자인 패턴</summary>
 <li><a href = "#Delegation"><code>Delegation Pattern</code></a></li>
-<li><a href = "#싱글턴"><code>Singleton</code></a></li>[Singleton](#싱글턴)
+<li><a href = "#싱글턴"><code>Singleton</code></a></li>
 <li><a href = "#Target-Action-디자인-패턴"><code>Targte-Action</code></a></li>
 </details>
 
@@ -53,9 +53,9 @@
 </details>
 
 <details><summary>Swift</summary>
-<li><a href = "#"><code>Dictionary의 활용</code></a></li>[](#)	
-<li><a href = "#guard"><code>guard 사용법</code></a></li>[](#)
-<li><a href = "#Codable"><code>Codable</code></a></li>[](#)
+<li><a href = "#"><code>Dictionary의 활용</code></a></li>	
+<li><a href = "#guard"><code>guard 사용법</code></a></li>
+<li><a href = "#Codable"><code>Codable</code></a></li>
 <li><a href = "#JSONDecoder-/-JSONEncoder"><code>JSONDecoder</code></a></li>
 <li><a href = "#ATS"><code>ATS(App Transport Security)</code></a></li>
 <li><a href = "#함수객체"><code>함수객체</code></a></li>
@@ -68,11 +68,11 @@
 </details>
 
 
-## 강의 목차
-* [Project 2](./lecture/project_2.md)
-* [Project 3](./lecture/project_3.md)
-* [Project 4](./lecture/project_4.md)
-* [Project 5](./lecture/project_5.md)
+<details><summary>강의별 정리 목차</summary>
+<li><a href = "./lecture/project_2.md"><code>Project 2</code></a></li>[]()
+<li><a href = "./lecture/project_3.md"><code>Project 3</code></a></li>[]()
+<li><a href = "./lecture/project_4.md"><code>Project 4</code></a></li>[]()
+<li><a href = "./lecture/project_5.md"><code>Project 5</code></a></li>[]()
 
 ## Human Interface Guideline
 H.I.G는 앱을 개발할 때 필요한 디자인과 동작을 포함한 여러 규칙을 통하여 사용자가 인터페이스를 구성하는 방법에 대한 지침이다.
