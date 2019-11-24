@@ -67,6 +67,13 @@
 <li><a href = "#DispatchQueue"><code>DispatchQueue</code></a></li>
 </details>
 
+<details><summary>Swift Standard Library</summary>
+<li><a href = "#"><code>String</code></a></li>
+<li><a href = "#"><code>Array</code></a></li>
+<li><a href = "#"><code>Dictionary</code></a></li>
+<li><a href = "#Tuple"><code>Tuple</code></a></li>
+</details>
+
 
 <details><summary>강의별 정리 목차</summary>
 <li><a href = "./lecture/project_2.md"><code>Project 2</code></a></li>
@@ -1980,3 +1987,29 @@ Swift에서의 함수객체
 - set
 
 등이 있다.
+
+
+## Tuple
+
+Swift의 타입들은 대부분 Struct 구조이다. tuple도 역시 Struct, 구조체이며 Type이다.
+단 **Array와의 차이점**은 **여러가지 "타입"을 한꺼번에 묶어서 사용할 수 있다는 점**이다. function type까지 담을 수 있다.
+
+~~~
+func run() -> Bool { return true}
+var tuple = ("love", 23, true)
+var anotherTuple = (1,(tuple), run())
+~~~
+
+### tuple 사용법
+
+![](./img/tuple.png)
+
+이렇게 변수명에 .을 찍으면 인덱스 별로 값에 접근 할 수 있다.
+**추가적으로** 값에 이름을 설정해 줄 수 있는데, 이름을 설정해주면 인덱스 값 대신 이름으로 값에 접근할 수 있다.
+
+![](./img/tuple2.png)
+
+
+
+
+
