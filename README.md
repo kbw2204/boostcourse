@@ -69,10 +69,11 @@
 
 
 <details><summary>강의별 정리 목차</summary>
-<li><a href = "./lecture/project_2.md"><code>Project 2</code></a></li>[]()
-<li><a href = "./lecture/project_3.md"><code>Project 3</code></a></li>[]()
-<li><a href = "./lecture/project_4.md"><code>Project 4</code></a></li>[]()
-<li><a href = "./lecture/project_5.md"><code>Project 5</code></a></li>[]()
+<li><a href = "./lecture/project_2.md"><code>Project 2</code></a></li>
+<li><a href = "./lecture/project_3.md"><code>Project 3</code></a></li>
+<li><a href = "./lecture/project_4.md"><code>Project 4</code></a></li>
+<li><a href = "./lecture/project_5.md"><code>Project 5</code></a></li>
+</details>
 
 ## Human Interface Guideline
 H.I.G는 앱을 개발할 때 필요한 디자인과 동작을 포함한 여러 규칙을 통하여 사용자가 인터페이스를 구성하는 방법에 대한 지침이다.
