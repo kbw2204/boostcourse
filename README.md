@@ -1741,6 +1741,7 @@ let dataTask: URLSessionTask = session.dataTask(with: url) { (data: Data?, respo
 dataTask.resume()
 ```
 
+#### 참고
 
 - [URLSession - Foundation](https://developer.apple.com/documentation/foundation/urlsession)
 - [URLSessionTask - Foundation](https://developer.apple.com/documentation/foundation/urlsessiontask)
@@ -1908,6 +1909,7 @@ handler = { (action: UIAlertAction) in
  ~~~
  
   ![](./img/project5/ats1.png) 
+  
   
   
   [돌아가기 > 배우는 내용](#배우는-내용)
@@ -2148,11 +2150,11 @@ let attendees: Set = ["Alicia", "Bethany", "Diana"]
 alone.isDisjoint(with: employees) // true
 ```
 
+#### 참고
 
 - [Apple Documentation](https://developer.apple.com/documentation/swift/set)
 - [zedd 블로그](https://zeddios.tistory.com/131)
 - [쌈스의 개발 블로그](https://woongsios.tistory.com/13)
 - [INSWAG 블로그](https://atelier-chez-moi.tistory.com/23)
-
 
 [돌아가기 > 배우는 내용](#배우는-내용)
