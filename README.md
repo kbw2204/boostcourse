@@ -15,7 +15,7 @@
 </details>
 
 <details><summary>디자인 패턴</summary>
-<li><a href = "#디자인-패턴이란?"><code>디자인 패턴이란?</code></a></li>
+<li><a href = "#디자인-패턴이란"><code>디자인 패턴이란?</code></a></li>
 <li><a href = "#Delegation"><code>Delegation Pattern</code></a></li>
 <li><a href = "#싱글턴"><code>Singleton</code></a></li>
 <li><a href = "#Target-Action-디자인-패턴"><code>Targte-Action</code></a></li>
@@ -31,7 +31,7 @@
 <li><a href = "#UIDatePicker"><code>UIDatePicker</code></a></li>
 <li><a href = "#StackView"><code>UIStackView</code></a></li>
 <li><a href = "#"><code>UIImagePickerController</code></a></li>
-<li><a href = "#Gesture-Recognizer"><code>UIGestureRecognizer</code></a></li>
+<li><a href = "#Gesture-</li>Recognizer"><code>UIGestureRecognizer</code></a></li>
 <li><a href = "#뷰의-상태변화-감지-메서드"><code>뷰의 생명주기</code></a></li>
 <li><a href = "#UITableView"><code>UITableView</code></a></li>
 <li><a href = "#UITableViewCell"><code>UITableViewCell</code></a></li>
@@ -249,7 +249,7 @@ override func viewDidLoad() {
 [돌아가기 > 배우는 내용](#배우는-내용)
 
 
-## 디자인 패턴이란?
+## 디자인 패턴이란
 
 디자인 패턴이란 다양한 개발환경에서 비슷한 문제들이 발생할 수 있는데, 이러한 문제들을 해결하는 정형화된 해결책을 말합니다. 즉 개발에 있어서 문제를 해결했던 필터링된 템플릿이나 개발패턴이라고 할 수 있습니다.
 
