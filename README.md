@@ -15,6 +15,7 @@
 </details>
 
 <details><summary>디자인 패턴</summary>
+<li><a href = "#디자인-패턴이란?"><code>디자인 패턴이란?</code></a></li>
 <li><a href = "#Delegation"><code>Delegation Pattern</code></a></li>
 <li><a href = "#싱글턴"><code>Singleton</code></a></li>
 <li><a href = "#Target-Action-디자인-패턴"><code>Targte-Action</code></a></li>
@@ -244,6 +245,37 @@ override func viewDidLoad() {
 
 #### 참고
 - [UIViewController - UIKit](https://developer.apple.com/documentation/uikit/uiviewcontroller)
+
+[돌아가기 > 배우는 내용](#배우는-내용)
+
+
+## 디자인 패턴이란?
+
+디자인 패턴이란 다양한 개발환경에서 비슷한 문제들이 발생할 수 있는데, 이러한 문제들을 해결하는 정형화된 해결책을 말합니다. 즉 개발에 있어서 문제를 해결했던 필터링된 템플릿이나 개발패턴이라고 할 수 있습니다.
+
+### 디자인 패턴 장점
+
+- 테스트된 솔루션
+- 코드 통일
+- 공통 어휘
+
+### 디자인 패턴 종류
+
+- 생성 패턴
+  - Singleton
+    - FileManager.default
+    - URLSession.shared
+    - NotificationCenter.default
+    - UserDefaults.standard
+    - UIApplication.shared
+- 구조 패턴
+  - MVC, MVP, MVVM
+
+
+#### 참고
+- [얄미대미 개발 블로그](https://m.blog.naver.com/PostView.nhn?blogId=jdub7138&logNo=220968244920&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
+- [iOS 삽질 블로그](https://leejigun.github.io/Top_5_Design_Patterns)
+- [edWith - Singleton](https://www.edwith.org/boostcourse-ios/lecture/16855/)
 
 [돌아가기 > 배우는 내용](#배우는-내용)
 
