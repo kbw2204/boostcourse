@@ -9,7 +9,7 @@
 ## 배우는 내용
 <details><summary>Inbox</summary>
 <li><a href = "#Human-Interface-Guideline"><code>Human Interface Guideline</code></a></li>
-<li><a href = "#Any,AnyObject"><code>Any, AnyObject</code></a></li>
+<li><a href = "#Any와-AnyObject"><code>Any, AnyObject</code></a></li>
 </details>
 
 <details><summary>FrameWork</summary>
@@ -2315,7 +2315,7 @@ print(students)
 
 [돌아가기 > 배우는 내용](#배우는-내용)
 
-## Any,AnyObject
+## Any와 AnyObject
 
 - `Any`는 스위프트의 모든 데이터 타입을 사용할 수 있는 **카워드**입니다.
 - `AnyObject`는 Any보다 한정적인 의미로 클래스의 인스턴스만 할당할 수 있는 **프로토콜** 입니다.
