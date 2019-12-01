@@ -7,7 +7,7 @@
 <li><a href = "./cs/cs50.md"><code>CS 50(추가 정리)</code></a></li>
 
 ## 배우는 내용
-<details><summary>FrameWork</summary>
+<details><summary>Inbox</summary>
 <li><a href = "#Human-Interface-Guideline"><code>Human Interface Guideline</code></a></li>
 <li><a href = "#Any,AnyObject"><code>Any, AnyObject</code></a></li>
 </details>
