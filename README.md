@@ -2326,6 +2326,7 @@ print(students)
 
 #### 참고
 
-- [apple Documentation](https://developer.apple.com/documentation/swift/array/1688499-sort#)
+- 야곰의 Swift
+- [Zedd Blog](https://zeddios.tistory.com/213)
 
 [돌아가기 > 배우는 내용](#배우는-내용)
