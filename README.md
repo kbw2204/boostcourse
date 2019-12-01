@@ -7,8 +7,10 @@
 <li><a href = "./cs/cs50.md"><code>CS 50(추가 정리)</code></a></li>
 
 ## 배우는 내용
-
+<details><summary>FrameWork</summary>
 <li><a href = "#Human-Interface-Guideline"><code>Human Interface Guideline</code></a></li>
+<li><a href = "#Any,AnyObject"><code>Any, AnyObject</code></a></li>
+</details>
 
 <details><summary>FrameWork</summary>
 <li><a href = "#photos-FrameWork"><code>Photos</code></a></li>
@@ -2306,6 +2308,21 @@ print(students)
 
 ### sorted()랑 차이점은..?
 `sort()`는 해당 컬렉션이 실제로 정렬이 되었지만, `sorted()`는 실제로 수정되는 것이 아닌 **정렬된 복제본은 만들어서 리턴**해준다.(그렇기 때문에 메모리 사용량이 두배로..)
+
+#### 참고
+
+- [apple Documentation](https://developer.apple.com/documentation/swift/array/1688499-sort#)
+
+[돌아가기 > 배우는 내용](#배우는-내용)
+
+## Any,AnyObject
+
+- `Any`는 스위프트의 모든 데이터 타입을 사용할 수 있는 **카워드**입니다.
+- `AnyObject`는 Any보다 한정적인 의미로 클래스의 인스턴스만 할당할 수 있는 **프로토콜** 입니다.
+
+> NOTE: Any와 AnyObject는 될 수 있으면 사용하지 않는 편이 좋습니다. 그 이유는 타입에 엄격한 Swift 특성상 매번 타입 확인 및 변환을 해줘야 하는 과정이 필요하고 예기치 못한 오류 또한 발생할 수 있기 때문입니다.
+
+![](./img/any.png)
 
 #### 참고
 
