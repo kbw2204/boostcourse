@@ -56,7 +56,7 @@
 </details>
 
 <details><summary>Swift</summary>
-<li><a href = "#옵셔널"><code>옵셔널</code></a></li>
+<li><a href = "./Swift/Optional.md"><code>옵셔널</code></a></li>
 <li><a href = "#ARC"><code>ARC</code></a></li>
 <li><a href = "#"><code>Dictionary의 활용</code></a></li>	
 <li><a href = "#guard"><code>guard 사용법</code></a></li>
@@ -2273,16 +2273,6 @@ ARC는 자동으로 약한참조를 nil로 설정합니다.
 
 - 야곰의 Swift 책
 - [Hyejun Jang 블로그](http://jhyejun.com/blog/memory-management-arc)
-
-[돌아가기 > 배우는 내용](#배우는-내용)
-
-## 옵셔널
-
-옵셔널은 
-
-#### 참고
-
-
 
 [돌아가기 > 배우는 내용](#배우는-내용)
 
