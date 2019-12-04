@@ -78,7 +78,7 @@
 <li><a href = "#"><code>Dictionary</code></a></li>
 <li><a href = "#Set"><code>Set</code></a></li>
 <li><a href = "#Tuple"><code>Tuple</code></a></li>
-<li><a href = "./Type/Protocols.md"><code>Protocols</code></a></li>
+<li><a href = "./Type/protocols.md"><code>Protocols</code></a></li>
 </details>
 
 <details><summary>Swift Standard Library</summary>
