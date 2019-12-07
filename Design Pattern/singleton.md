@@ -74,4 +74,5 @@ class Singleton {
 - [Singleton - Apple Developer](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Singleton.html)
 - [Cocoa Design Patterns](https://developer.apple.com/documentation/swift/cocoa_design_patterns#//apple_ref/doc/uid/TP40014216-CH7-ID8)
 
-[돌아가기 > 배우는 내용](#배우는-내용)
+
+[돌아가기](https://github.com/kbw2204/swiftNote)
