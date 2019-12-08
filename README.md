@@ -33,7 +33,7 @@
 <li><a href = "#UIDatePicker"><code>UIDatePicker</code></a></li>
 <li><a href = "#StackView"><code>UIStackView</code></a></li>
 <li><a href = "#"><code>UIImagePickerController</code></a></li>
-<li><a href = "#Gesture-</li>Recognizer"><code>UIGestureRecognizer</code></a></li>
+<li><a href = "#Gesture-Recognizer"><code>UIGestureRecognizer</code></a></li>
 <li><a href = "#뷰의-상태변화-감지-메서드"><code>뷰의 생명주기</code></a></li>
 <li><a href = "#UITableView"><code>UITableView</code></a></li>
 <li><a href = "#UITableViewCell"><code>UITableViewCell</code></a></li>
