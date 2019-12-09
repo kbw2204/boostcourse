@@ -28,12 +28,14 @@ CPU 할당 순서 및 방법을 결정하는 일
 
 #### 프로세스 상태변화
 
+![](./img/process1.png)
+
 프로세스 상태변화는 크게 ready, blocked, running 상태가 있어요.
 
-	•	Ready: 프로세스가 생성되면 프로세스는 ready Queue에 올라가게 됩니다.
-	•	Running Read Queue에 있던 프로세스들이 스케쥴링에 의해 실행되어야 할 프로세스가 CPU에 할당되면서 Running 상태가 됩니다.
-	⁃	-> Ready: 실행중인 프로그램A보다 Queue에 있던 프로세스B가 우선순위가 더 높다면 실행중이던 A는 다시 ReadyQueue로 들어가게 됩니다.
-	⁃	-> Blocked: 실행중이던 프로세스A에서 입출력 이벤트 발생시 프로세스A는 Blocked 상태로 됩니다.
-	⁃	Block -> ready: 입출력 이벤트가 끝나면 다시 Ready상태가 됩니다.
-	⁃	-> Terminate: 프로세스 종료
+- Ready: 프로세스가 생성되면 프로세스는 ready Queue에 올라가게 됩니다.
+- Running: Read Queue에 있던 프로세스들이 스케쥴링에 의해 실행되어야 할 프로세스가 CPU에 할당되면서 Running 상태가 됩니다.
+- Ready: 실행중인 프로그램A보다 Queue에 있던 프로세스B가 우선순위가 더 높다면 실행중이던 A는 다시 ReadyQueue로 들어가게 됩니다.
+- Blocked: 실행중이던 프로세스A에서 특정 이벤트 발생하거나 프로세스가 필요한 자원을 기다리는 상태일 때 프로세스A는 Blocked 상태로 됩니다.
+- Block -> ready: 이벤트가 끝나면 다시 Ready상태가 됩니다.
+- Terminate: 프로세스 종료
 
