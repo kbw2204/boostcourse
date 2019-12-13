@@ -57,7 +57,7 @@
 
 <details><summary>Swift</summary>
 <li><a href = "./Swift/Optional.md"><code>옵셔널</code></a></li>
-<li><a href = "#ARC"><code>ARC</code></a></li>
+<li><a href = "./ARC란.md"><code>ARC</code></a></li>
 <li><a href = "#"><code>Dictionary의 활용</code></a></li>	
 <li><a href = "#guard"><code>guard 사용법</code></a></li>
 <li><a href = "#Codable"><code>Codable</code></a></li>
