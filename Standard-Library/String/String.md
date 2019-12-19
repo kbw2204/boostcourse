@@ -72,7 +72,7 @@ textString.startIndex, offsetBy: i) // return String.Index
 
 이런메소드가 있어요
 
-![][스크린샷2019-12-19오후100807]
+<img src="./img.png" width="309px" height="39px">
 
 before와 after의 차이는 해당 index값 기준으로 이전값을 쓸건지, 이후값을 쓸건지 인데, 이거의 인자값도 String.Index죠?.. 그래서 한번 더 써줘야 해요
 String의 String.Index값을 얻는 방법은 딱 2가지에요. 첫번째 인덱스, 마지막 인덱스.. 그 안에서 offsetBy를 통해 몇번째  떨어진 값을 쓸건지 결정해주는 거에요.. 즉
@@ -159,5 +159,3 @@ var arr: [String] = str.split(at: 3)
 ```
 
 그럼 이만.. 좋은 하루 되세용..
-
-[스크린샷2019-12-19오후100807]: 스크린샷2019-12-19오후100807.png width=309px height=39px
