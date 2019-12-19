@@ -51,6 +51,7 @@
   - [Tuple](./Type/Tuple.md)
   - [Protocols](./Type/protocols.md)
 - Swift Standard Library
+  - [String](./Standard-Library/String/String.md)
   - [sort()](./Standard-Library/sort.md)
 
 ## 추가
