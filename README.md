@@ -50,6 +50,7 @@
   - [Set](./Type/Set.md)
   - [Tuple](./Type/Tuple.md)
   - [Protocols](./Type/protocols.md)
+  - [Generic](./Type/generic.md)
 - Swift Standard Library
   - [String](./Standard-Library/String/String.md)
   - [sort()](./Standard-Library/sort.md)
