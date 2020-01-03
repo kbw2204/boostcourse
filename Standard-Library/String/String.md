@@ -4,6 +4,7 @@
 
 개발자로 취업을 하려면 코딩테스트는 꼭 넘어야 할 관문 중 하나인데,
 특히 iOS 직무로 취업을 하려면,, 코딩테스트를 풀 언어가 아무래도 Swift로 짜면 좋겠죠?.. 쭉 Swift를 사용할 거니깐..
+
 > iOS 직무로 시험보는데 왜 Swift로 안짯냐는 얘기를 들었단 썰을 들은 적이 있습니다.. 아무래도 쭉 공부할 언어인데 안쓴다니 코딩테스트를 합격한다 해도 면접에서 참 애매하겠네요 ㅠ
 
 아직도 기억나는데,, 제가 처음으로 iOS 개발 직무에서 서류를 합격하고 코딩테스트를 난생 처음으로 시험봐봤는데, 학교에서 배웠던 C로는 짤 수 있겠는데 Swift로 작성하려다가 scanf 하나 못써서 떨어진 기억이 있습니다.. 지금까지 연습앱만 만들어봤지 2년동안 Swift를 공부하면서 커맨드창에서 값을 입력받아본 적이 없더라구요.. textField에서 입력받았었지.. 그래서 본격적으로 Swift로 코딩테스트를 보기 위해 공부하기 시작했는데, String 부분이 참 애매하더라구요 ..ㅠ
@@ -27,7 +28,7 @@ text[text.index(text.startIndex, offsetBy: 1)]
 
 String은 숫자처럼 + 기호를 통해 붙혀 쓸수 있어요! 어떤 의미냐면..
 
-```
+```swift
 let text1: String = "my name is "
 let text2: String = "apeach"
 let result: String = text1 + text2 + ".."
@@ -35,15 +36,25 @@ let result: String = text1 + text2 + ".."
 ```
 
 이런식으로 붙혀 사용이 가능합니다!
-또.. 배열에서 크기를 구할때 count를 사용했던 것 처럼.. string도 count 메소드로 구할 수 있어요..
+
+#### String 특정문자 반복선언
+
+Array에선 repeat이란게 있었죠?? (그런게 있어요..)  String에도 repeat을 통해 선언해 볼 수 있어요!
+
+```swift
+let text: String = String(repeating: "*", count: 4) // ****
 ```
+
+또.. 배열에서 크기를 구할때 count를 사용했던 것 처럼.. string도 count 메소드로 구할 수 있어요..
+
+```swift
 let text: String = "love"
 print(text.count) // 4
 ```
 
 또한 for문으로 각각 뿌려줄 수도 있어요.. 참고로 Swift에서의 print문은 \n 포함이에요..
 
-```
+```swift
 let text: String = "love"
 for char in text {
 	print(char)
@@ -64,7 +75,7 @@ StringIndex값을 얻을 수 있는 방법은 여러가지가 있는데,
 
 그냥 textString변수의 i번째 인덱스값을 원할땐
 
-```
+```swift
 textString.startIndex, offsetBy: i) // return String.Index
 ```
 
@@ -72,12 +83,15 @@ textString.startIndex, offsetBy: i) // return String.Index
 
 이런메소드가 있어요
 
-<img src="./img.png" width="309px" height="39px">
+```swift
+index(after: String.Index)
+index(before: String.Index)
+```
 
 before와 after의 차이는 해당 index값 기준으로 이전값을 쓸건지, 이후값을 쓸건지 인데, 이거의 인자값도 String.Index죠?.. 그래서 한번 더 써줘야 해요
 String의 String.Index값을 얻는 방법은 딱 2가지에요. 첫번째 인덱스, 마지막 인덱스.. 그 안에서 offsetBy를 통해 몇번째  떨어진 값을 쓸건지 결정해주는 거에요.. 즉
 
-```
+```swift
 let *: String = "love" // 원래는 *를 변수명으로 선언할 수 없어요. 쉬운작성을 위해 이렇게 적었...
 *[*.index(after: *.startIndex)] // o
 *[*.index(after:*.endIndex)]
@@ -107,7 +121,7 @@ after와 before가 왜 있는지 감이 오시나요?.. 접근할 수 있는건 
 복잡하겠지만... 숨은그림찾기라 생각하고 열심히 적어줘야해요...
 
 
-```
+```swift
 // 인덱스 0 ~ 마지막까지 range
 let a: String = "abcdefg"
 let start: String.Index = a.index(a.startIndex, offsetBy: 0)
@@ -124,7 +138,7 @@ print(a[start..<end] // abcdef
 
 ### String 범위 출력
 
-```
+```swift
 extension String {
     subscript(r: Range<Int>) -> String {
         let start = self.index(self.startIndex, offsetBy: r.lowerBound)
@@ -142,7 +156,7 @@ print(str[4..<str.count]) // Developer
 
 ### String 해당범위 나누기 -> Array
 
-```
+```swift
 extension String {
     func split(at index: Int) -> [String] {
         let pivot = self.index(self.startIndex, offsetBy: index)
