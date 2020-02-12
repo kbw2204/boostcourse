@@ -42,6 +42,7 @@
   - [JSONDecoder](./Swift/JSONDecoder-/-JSONEncoder.md)
   - [ATS(App Transport Security)](./Swift/ATS.md)
   - [함수객체](./Swift/함수객체.md)
+  - [map, filter, reduce](./Swift/map,-filter,-reduce.md)
 - Concurrency Programming(실시간 프로그래밍)
   - [Asynchronous Programming](./Concurrency-Programming/Asynchronous.md)
   - [OperationQueue](./Concurrency-Programming/OperationQueue.md)
