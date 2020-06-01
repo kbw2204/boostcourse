@@ -31,10 +31,17 @@ Photos FrameWork에는 ios 및 tvOS에서 사용자의 사진 라이브러리와
 
 ### Photos 프레임워크 전체적인 큰 틀
 
-> PHAssetCollection(앨범 뭉탱이) ~ PHCollection(앨범) ~ PHAsset(사진) ~(ImageManager를 통해 이미지 추출) UIImage()
+> '<PHAssetCollection(앨범 뭉탱이)>' ~ PHAssetCollection(앨범) ~ PHAsset(사진) ~(ImageManager를 통해 이미지 추출) UIImage()
 
-즉 이미지를 사용할려면 맨 꼭대이긴 앨범뭉탱이(PHAssetCollection)을 가져와야 하고, 그 중에서 특정앨범을(PHCollection)을 선택해서 그 앨범 안에 있는 사진(PHAsset - > UIImage)를 가져와서 사용하는 메커니즘..
+즉 이미지를 사용할려면 맨 꼭대이긴 앨범뭉탱이(<PHAssetCollection.>)을 가져와야 하고, 그 중에서 특정앨범을(PHAssetCollection)을 선택해서 그 앨범 안에 있는 사진(PHAsset - > UIImage)를 가져와서 사용하는 메커니즘..
 
+
+
+### 그럼 PHCollection은 뭐야??
+
+PHCollection은 asset collection을 위한 추상 슈퍼클래스로 PHObject를 상속받고 있는 애에요. 여기서 PHCollection은 직접 사용하면 안되고 하위클래스인 PHAssetCollection 이나 PHCollectionList 를 사용해서 써야한다고 애플 개발자문서에 적혀있어요.
+
+> PHCollection: You do not create or work with instances of this class directly. Instead, use one of its two concrete subclasses, PHAssetCollection or PHCollectionList.
 
 ### Photos 관련 객체
 
